@@ -14,6 +14,8 @@ This code implements the following system:
 
 ![System diagram.](images/system_diag.png)
 
+*Light gray and yellow*: embedded robot modules; *dark gray*: external modules; *green*: proposed modules. This repository has the proposed modules implementations in the **automomous_tidy_up package for ros melodic.**
+
 More details at the Master's thesis [here]() and on the paper [here](). Video of the test with the real robot at University of Oslo lab [here](https://www.youtube.com/playlist?list=PL93mJkxVSzyQpZxOhE7NLlZv27-3-pwFS).
 
 Robot tidying up the yellow cup from the test with the real robot, speedup x10:
@@ -22,9 +24,9 @@ Robot tidying up the yellow cup from the test with the real robot, speedup x10:
 
 ![TIAGo placeing.](images/tiago_placing.gif)
 
-🤖 Any questions or problems with the code of this repository, please contact us by email: lsantos@inf.ufrgs.br
-
 The Gazebo models used in this work are on model_editor_models and building_editor_models folders. The original models for some objects are available [here](https://fuel.gazebosim.org/1.0/LeDSantos/fuel/collections/Autonomous%20manipulator%20robot%20navigation%20to%20tidy%20up%20unknown%20environments%20-%20public%20objects).
+
+🤖 Any questions or problems with the code of this repository, please contact us by email: lsantos@inf.ufrgs.br
 
 # Recomended enviroment:
 

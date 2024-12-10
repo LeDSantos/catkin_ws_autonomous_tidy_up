@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+  <node name="filtering_points_slow_pub_freq" type="throttle" pkg="topic_tools" args="messages /throttle_filtering_points/filtered_points 1.0 /throttle_filtering_points/filtered_points_slow" output="screen"/>
+  
+  <node pkg="octomap_server" type="octomap_server_node" name="octomap_server">
+    <param name="resolution" value="0.025" />
+    <param name="frame_id" type="string" value="base_footprint" />
+    <!-- maximum range to integrate (speedup!) -->
+    <param name="sensor_model/max_range" value="1.5" />
+
+    <param name="filter_ground" type="bool" value="false" />
+    <param name="filter_speckles" type="bool" value="false" />
+
+    <remap from="cloud_in" to="/throttle_filtering_points/filtered_points_slow" />
+  </node>
+
+  <rosparam command="load" file="$(find autonomous_tidy_up)/config/tiago_custom_motions.yaml" /> 
+
+  <node name="octomap_and_planning_scene_run" pkg="autonomous_tidy_up" output="screen" type="octomap_and_planning_scene_node">
+    <remap from="/octomap_and_planning_scene_run/planning_scene" to="/planning_scene" />
+    <remap from="/octomap_and_planning_scene_run/planning_scene_ready" to="/planning_scene_ready" />
+    <remap from="/octomap_and_planning_scene_run/object_on_octomap" to="/object_on_octomap" />    
+  </node>
+</launch>

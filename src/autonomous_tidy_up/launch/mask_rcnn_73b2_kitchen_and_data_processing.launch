@@ -1,0 +1,35 @@
+<launch>
+
+  <arg name="gui" default="false" />
+  <arg name="gpu" default="0" />
+
+  <node name="look_down" type="move_joint" pkg="play_motion" args="head_2_joint -1.0 2.0"/>
+
+  <!-- publishes every 2s -->
+  <node name="image_raw_slow_pub_freq" type="throttle" pkg="topic_tools" args="messages /xtion/rgb/image_raw 2.0 /xtion/rgb/image_raw_slow" output="screen"/>
+
+  <arg name="INPUT_IMAGE" default="/xtion/rgb/image_raw_slow" />
+
+  <node name="mask_rcnn_73b2_kitchen"
+        pkg="jsk_perception" type="mask_rcnn_instance_segmentation.py"
+        clear_params="true">
+    <remap from="~input" to="$(arg INPUT_IMAGE)" />
+    <rosparam command="load"
+              file="$(find jsk_perception)/trained_data/mask_rcnn_resnet50_73B2_kitchen_20190619_classnames.yaml" />
+    <rosparam subst_value="true">
+      gpu: $(arg gpu)
+      pretrained_model: $(find jsk_perception)/trained_data/mask_rcnn_resnet50_73B2_kitchen_20190619.npz
+    </rosparam>
+  </node>
+
+  <node name="camera_data_processing" pkg="autonomous_tidy_up" type="camera_data_processing_node" output="screen"/>
+
+  <group if="$(arg gui)">
+    <node name="image_view"
+          pkg="image_view" type="image_view"
+          clear_params="true">
+      <remap from="image" to="mask_rcnn_73b2_kitchen/output/viz" />
+    </node>
+  </group>
+
+</launch>

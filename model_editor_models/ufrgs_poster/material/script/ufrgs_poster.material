@@ -1,0 +1,13 @@
+material Custom/ufrgs_logo
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture ufrgs.png
+			}
+		}
+	}
+}

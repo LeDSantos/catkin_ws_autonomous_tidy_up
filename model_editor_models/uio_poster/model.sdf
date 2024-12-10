@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<sdf version='1.4'>
+  <model name='uio_poster'>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.03 2.98 1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://uio_poster/material/script</uri>
+            <uri>model://uio_poster/material/textures</uri>
+            <name>Custom/uio_logo</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <static>1</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+<!-- TURN OFF THE ROBOT MAP SAVER -->
+<!-- MAKE SURE THAT localizer IS TURN ON-->
+<!-- Singularity> rosservice call /global_localization "{}" -->
+
+<arg name="map_file" default="$(find autonomous_tidy_up)/maps/map_lab.yaml"/>
+
+<!-- Run the map server -->
+<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+<node pkg="rosservice" type="rosservice" name="global_loc" args="call /global_localization " />
+
+</launch>

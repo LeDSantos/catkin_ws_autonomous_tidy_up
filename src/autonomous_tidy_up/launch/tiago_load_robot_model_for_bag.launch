@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!--from /tiago_public_ws/src/tiago_simulation/tiago_gazebo/launch/tiago_spawn.launch -->
+
+  <arg name="robot"  default="steel"/>
+  <arg name="arm"  default="$(eval {'iron': False}.get(arg('robot'), True))"/>
+  <arg name="end_effector"  default="$(eval {'iron': 'false', 'steel': 'pal-gripper', 'titanium': 'pal-hey5'}.get(arg('robot'), 'pal-gripper'))"/>
+  <arg name="ft_sensor"  default="$(eval {'titanium': 'schunk-ft'}.get(arg('robot'), 'false'))"/>
+  <arg name="laser_model"  default="sick-571"/>
+  <arg name="camera_model"  default="orbbec-astra"/>
+  <arg name="multi" default=""/>
+  <arg name="base_type" default="pmb2"/>
+
+  <!-- Robot model -->
+  <include file="$(find tiago_description)/robots/upload.launch">
+    <arg name="arm" value="$(arg arm)"/>
+    <arg name="end_effector" value="$(arg end_effector)"/>
+    <arg name="ft_sensor" value="$(arg ft_sensor)"/>
+    <arg name="laser_model" value="$(arg laser_model)"/>
+    <arg name="camera_model" value="$(arg camera_model)"/>
+    <arg name="multi"  value="$(arg multi)"/>
+    <arg name="base_type"  value="$(arg base_type)"/>
+  </include>
+
+  <!-- from /tiago_public_ws/src/tiago_moveit_config/launch/planning_context.launch-->
+
+  <!-- Selection of kinematics solver -->
+  <arg name="kinematics" value="$(optenv IK_SOLVER kdl)" />
+
+  <!-- The name of the parameter under which the URDF is loaded -->
+  <arg name="robot_description" default="robot_description"/>
+
+  <arg name="file_suffix" value="$(eval (('' if base_type == 'pmb2' else 'omni_') + ('no-arm' if not arm else (end_effector if end_effector else 'no-ee') + 
+		('_' +  ft_sensor if ft_sensor else ''))))"/>  
+
+  <!-- The semantic description that corresponds to the URDF -->
+  <param if="$(eval end_effector != 'custom')" name="$(arg robot_description)_semantic" textfile="$(find tiago_moveit_config)/config/srdf/tiago_$(arg file_suffix).srdf" />
+  <param if="$(eval end_effector == 'custom')" name="$(arg robot_description)_semantic" textfile="$(find moveit_custom_config)/config/srdf/tiago_custom.srdf" />
+
+  <!-- Load updated joint limits (override information from URDF) -->
+  <group ns="$(arg robot_description)_planning">
+    <rosparam command="load" file="$(find tiago_moveit_config)/config/joint_limits.yaml"/>
+  </group>
+
+  <!-- Load default settings for kinematics; these settings are overridden by settings in a node's namespace -->
+  <group ns="$(arg robot_description)_kinematics">
+    <rosparam command="load" file="$(find tiago_moveit_config)/config/kinematics_$(arg kinematics).yaml"/>
+  </group>
+
+</launch>

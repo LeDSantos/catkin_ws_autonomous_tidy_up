@@ -1,0 +1,13 @@
+material Custom/uio_logo
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture 02_uio_full_logo_eng_pos.png
+			}
+		}
+	}
+}

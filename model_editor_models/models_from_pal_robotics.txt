@@ -1,0 +1,7 @@
+Models from /tiago_public_ws/src/tiago_simulation/tiago_gazebo/models:
+sprite
+cocacola
+coke_can_slim
+pringles2
+pringles
+sideboard

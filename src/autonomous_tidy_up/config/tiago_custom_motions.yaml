@@ -1,0 +1,311 @@
+play_motion:
+  motions:
+    head_look_aroundORIGINAL:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, 0]
+        time_from_start: 0.1
+      - positions: [0, -0.7]
+        time_from_start: 3.0
+      - positions: [-0.7, -0.7]
+        time_from_start: 6.0
+      - positions: [-0.7, -0.5]
+        time_from_start: 9.0
+      - positions: [0, -0.5]
+        time_from_start: 12.0
+      - positions: [0.7, -0.5]
+        time_from_start: 15.0
+      - positions: [0.7, -0.7]
+        time_from_start: 18.0
+      - positions: [0, -0.7]
+        time_from_start: 21.0
+      - positions: [0, -0.5]
+        time_from_start: 24.0
+      meta:
+        name: head_look_aroundORIGINAL
+        usage: demo
+        description: 'head_look_aroundORIGINAL'
+
+    head_look_around:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, 0]
+        time_from_start: 2.0
+      - positions: [0, -0.7]
+        time_from_start: 5.0
+      - positions: [-0.7, -0.7]
+        time_from_start: 8.0
+      - positions: [-0.7, -0.5]
+        time_from_start: 11.0
+      - positions: [0, -0.5]
+        time_from_start: 14.0
+      - positions: [0.7, -0.5]
+        time_from_start: 17.0
+      - positions: [0.7, -0.7]
+        time_from_start: 20.0
+      - positions: [0, -0.7]
+        time_from_start: 23.0
+      - positions: [0, -0.5]
+        time_from_start: 26.0
+      meta:
+        name: head_look_around
+        usage: demo
+        description: 'head_look_around'
+
+    BIGhead_look_around:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, 0]
+        time_from_start: 2.0
+      - positions: [0, -0.9]
+        time_from_start: 5.0
+      - positions: [-1.3, -0.9]
+        time_from_start: 8.0
+      - positions: [-1.3, -0.5]
+        time_from_start: 11.0
+      - positions: [0, -0.5]
+        time_from_start: 14.0
+      - positions: [1.3, -0.5]
+        time_from_start: 17.0
+      - positions: [1.3, -0.9]
+        time_from_start: 20.0
+      - positions: [0, -0.9]
+        time_from_start: 23.0
+      - positions: [0, -0.5]
+        time_from_start: 26.0
+      meta:
+        name: BIGhead_look_around
+        usage: demo
+        description: 'BIGhead_look_around'
+
+    look_right:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [-1.5, -1.0]
+        time_from_start: 2.0
+      meta:
+        name: look_right
+        usage: demo
+        description: 'look_right'
+
+    BIGhead_look_aroundFAST:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -0.5]
+        time_from_start: 2.0
+      - positions: [0, -0.9]
+        time_from_start: 4.0
+      - positions: [-1.3, -0.9]
+        time_from_start: 6.0
+      - positions: [-1.3, -0.5]
+        time_from_start: 8.0
+      - positions: [0, -0.5]
+        time_from_start: 10.0
+      - positions: [1.3, -0.5]
+        time_from_start: 12.0
+      - positions: [1.3, -0.9]
+        time_from_start: 14.0
+      - positions: [0, -0.9]
+        time_from_start: 16.0
+      - positions: [0, -0.5]
+        time_from_start: 18.0
+      meta:
+        name: BIGhead_look_aroundFAST
+        usage: demo
+        description: 'BIGhead_look_aroundFAST'
+
+    BIGhead_look_aroundFAST2:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -0.6]
+        time_from_start: 1.0
+      - positions: [0, -1.1]
+        time_from_start: 3.0
+      - positions: [-1.3, -1.1]
+        time_from_start: 5.0
+      - positions: [-1.3, -0.6]
+        time_from_start: 6.0
+      - positions: [0, -0.6]
+        time_from_start: 8.0
+      - positions: [1.3, -0.6]
+        time_from_start: 10.0
+      - positions: [1.3, -1.1]
+        time_from_start: 11.0
+      - positions: [0, -1.1]
+        time_from_start: 13.0
+      meta:
+        name: BIGhead_look_aroundFAST2
+        usage: demo
+        description: 'BIGhead_look_aroundFAST2'
+
+    BIGhead_look_aroundSLOW:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -0.6]
+        time_from_start: 1.0
+      - positions: [0, -1.1]
+        time_from_start: 3.0
+      - positions: [-1.3, -1.1]
+        time_from_start: 6.0
+      - positions: [-1.3, -0.6]
+        time_from_start: 7.0
+      - positions: [0, -0.6]
+        time_from_start: 10.0
+      - positions: [1.3, -0.6]
+        time_from_start: 13.0
+      - positions: [1.3, -1.1]
+        time_from_start: 14.0
+      - positions: [0, -1.1]
+        time_from_start: 17.0
+      meta:
+        name: BIGhead_look_aroundSLOW
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW'
+
+    BIGhead_look_aroundSLOW2:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -0.6]
+        time_from_start: 2.0
+      - positions: [0, -1.1]
+        time_from_start: 5.0
+      - positions: [-1.3, -1.1]
+        time_from_start: 9.0
+      - positions: [-1.3, -0.6]
+        time_from_start: 11.0
+      - positions: [0, -0.6]
+        time_from_start: 15.0
+      - positions: [1.3, -0.6]
+        time_from_start: 20.0
+      - positions: [1.3, -1.1]
+        time_from_start: 22.0
+      - positions: [0, -1.1]
+        time_from_start: 25.0
+      meta:
+        name: BIGhead_look_aroundSLOW2
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2'
+
+    BIGhead_look_aroundSLOW2_0:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -0.6]
+        time_from_start: 2.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_0
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_0'
+
+    BIGhead_look_aroundSLOW2_1:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -1.1]
+        time_from_start: 2.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_1
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_1'
+
+    BIGhead_look_aroundSLOW2_2:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [-1.3, -1.1]
+        time_from_start: 4.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_2
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_2'
+
+    BIGhead_look_aroundSLOW2_3:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [-1.3, -0.6]
+        time_from_start: 2.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_3
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_3'
+
+    BIGhead_look_aroundSLOW2_4:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -0.6]
+        time_from_start: 4.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_4
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_4'
+
+    BIGhead_look_aroundSLOW2_5:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [1.3, -0.6]
+        time_from_start: 4.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_5
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_5'
+
+    BIGhead_look_aroundSLOW2_6:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [1.3, -1.1]
+        time_from_start: 2.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_6
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_6'
+
+    BIGhead_look_aroundSLOW2_7:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -1.1]
+        time_from_start: 4.0
+      meta:
+        name: BIGhead_look_aroundSLOW2_7
+        usage: demo
+        description: 'BIGhead_look_aroundSLOW2_7'
+
+    BIGhead_look_aroundHIGHER:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, 0]
+        time_from_start: 2.0
+      - positions: [0, -0.6]
+        time_from_start: 5.0
+      - positions: [-1.3, -0.6]
+        time_from_start: 8.0
+      - positions: [-1.3, 0.0]
+        time_from_start: 11.0
+      - positions: [0, 0.0]
+        time_from_start: 14.0
+      - positions: [1.3, 0.0]
+        time_from_start: 17.0
+      - positions: [1.3, -0.6]
+        time_from_start: 20.0
+      - positions: [0, -0.6]
+        time_from_start: 23.0
+      meta:
+        name: BIGhead_look_aroundHIGHER
+        usage: demo
+        description: 'BIGhead_look_aroundHIGHER'
+
+    look_down_detect_again:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -1.0]
+        time_from_start: 2.0
+      meta:
+        name: look_down_detect_again
+        usage: demo
+        description: 'look_down_detect_again'
+
+    look_down_to_walk:
+      joints: [head_1_joint, head_2_joint]
+      points:
+      - positions: [0, -0.5]
+        time_from_start: 2.0
+      meta:
+        name: look_down_to_walk
+        usage: demo
+        description: 'look_down_to_walk'

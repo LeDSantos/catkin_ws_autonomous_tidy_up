@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<sdf version='1.4'>
+  <model name='garage_door_poster'>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>0.05 4. 2</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://garage_door_poster/material/script</uri>
+            <uri>model://garage_door_poster/material/textures</uri>
+            <name>Custom/garage_door</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+    <static>1</static>
+    <allow_auto_disable>1</allow_auto_disable>
+  </model>
+</sdf>

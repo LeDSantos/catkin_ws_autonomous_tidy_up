@@ -114,7 +114,7 @@ On the **first terminal**, there are this options to start the simulation:
 - [tiago_map_server_real_robot.launch](src/autonomous_tidy_up/launch/tiago_map_server_real_robot.launch): launches only the map server for the real robot. The real robot should be connected to the computer.
 - [tiago_simulation_new_map.launch](src/autonomous_tidy_up/launch/tiago_simulation_new_map.launch): used to create a new map while moving the robot at the room with Rviz interface or [key_teleop.py](http://wiki.ros.org/Robots/TIAGo/Tutorials/motions/key_teleop#Running_key_teleop).
 
-In all the launchs (exept tiago_map_server_real_robot.launch), you should select the enviroment and the start position for Gazebo simulation:
+In all the launchs (exept tiago_map_server_real_robot.launch), you should edit the file to select the enviroment and the start position for Gazebo simulation:
 
 - world = garage_kitchen_bedroom or garage_kitchen_bedroom_no_doors
 - gzpose = for GARAGE, KITCHEN or BEDROOM

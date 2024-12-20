@@ -93,7 +93,7 @@ The configuration can be set at [autonomous_tidy_up.cpp](src/autonomous_tidy_up/
 
 - Other values are adjustable too.
 
-IMPORTANT: SIMULATION should also be set at [camera_data_processing.cpp](src/autonomous_tidy_up/src/camera_data_processing.cpp) and [octomap_and_planning_scene.cpp](src/autonomous_tidy_up/src/octomap_and_planning_scene.cpp). Other values are repeted in these files too.
+IMPORTANT: SIMULATION should also be set at [camera_data_processing.cpp](src/autonomous_tidy_up/src/camera_data_processing.cpp) and [octomap_and_planning_scene.cpp](src/autonomous_tidy_up/src/octomap_and_planning_scene.cpp). Other values are repeated in these files too.
 
 # To execute the strategy:
 
@@ -114,7 +114,7 @@ On the **first terminal**, there are this options to start the simulation:
 - [tiago_map_server_real_robot.launch](src/autonomous_tidy_up/launch/tiago_map_server_real_robot.launch): launches only the map server for the real robot. The real robot should be connected to the computer.
 - [tiago_simulation_new_map.launch](src/autonomous_tidy_up/launch/tiago_simulation_new_map.launch): used to create a new map while moving the robot at the room with Rviz interface or [key_teleop.py](http://wiki.ros.org/Robots/TIAGo/Tutorials/motions/key_teleop#Running_key_teleop).
 
-In all the launchs (exept tiago_map_server_real_robot.launch), you should edit the file to select the enviroment and the start position for Gazebo simulation:
+In all the launchs (except tiago_map_server_real_robot.launch), you should edit the file to select the enviroment and the start position for Gazebo simulation:
 
 - world = garage_kitchen_bedroom or garage_kitchen_bedroom_no_doors
 - gzpose = for GARAGE, KITCHEN or BEDROOM
@@ -178,4 +178,4 @@ If metrics node is running, the logs will be at src/autonomous_tidy_up/logs/(env
 - Each execution produces a semantic_report(data)\_(starting time).txt with the final state of objects and tables, and test_(data)\_(starting time).csv with trajectory and more data collected during the execution.
 - Images from the maps are recorded at test_(data)\_(starting time)\_coverage_(stage number).pgm and test_(data)\_(starting time)\_semantic_(stage number).pgm.
 
-If GMAPPING_EXPLORATION == true, the local where it saved the map will appear at the terminal.
+If GMAPPING_EXPLORATION == true, the local where it saved the map will appear in the terminal at the end of the execution.

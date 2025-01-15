@@ -179,3 +179,5 @@ If metrics node is running, the logs will be at src/autonomous_tidy_up/logs/(env
 - Images from the maps are recorded at test_(data)\_(starting time)\_coverage_(stage number).pgm and test_(data)\_(starting time)\_semantic_(stage number).pgm.
 
 If GMAPPING_EXPLORATION == true, the local where it saved the map will appear in the terminal at the end of the execution.
+
+Further instructions for recording and running a ros bag at [instructions_run_bag.md](bags/instructions_run_bag.md).

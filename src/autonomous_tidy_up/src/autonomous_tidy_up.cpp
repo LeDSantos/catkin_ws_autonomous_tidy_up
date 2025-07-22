@@ -391,7 +391,7 @@ public:
   //////////GRID FUNCTIONS
   bool FreeArea(int n_center, int m_center, float dist);
   float PositionOnGrid(float pos, float dist);
-  bool SimpleTrajectory();
+  bool SimpleTrajectory(float min_dist);
   void PubVisitedGrid();
   int preference_wall=1;
   bool finded_wall=false;
@@ -4456,11 +4456,11 @@ float AutonomousTidyUp::PositionOnGrid(float pos, float dist){
 }
 
 // Guides the robot to walk on a grid.
-bool AutonomousTidyUp::SimpleTrajectory(){
+bool AutonomousTidyUp::SimpleTrajectory(float min_dist){
   int i_pref, j_pref, mult_ang;
   int current_index;
   float robot_yaw, goal_yaw, x_pref, y_pref, current_robot_x_on_grid, current_robot_y_on_grid;
-  float min_dist=1.0;// space between the goals on the grid
+  // float min_dist=1.0;// space between the goals on the grid
   geometry_msgs::Pose goal_pose, preference_pose;
   geometry_msgs::Quaternion new_quat;
   geometry_msgs::Pose computed_goal_point_;
@@ -5566,7 +5566,7 @@ void AutonomousTidyUp::ExploreToFindObjects()
     PubVisitedGrid();
 
     if ((dist < 0.2 && abs(constrainAngle(yaw_robot - yaw_goal_point)) < M_PI/4.0) || !PathExist(goal_point_))
-      if(SimpleTrajectory()) // Returns true when the strategy is over.
+      if(SimpleTrajectory(min_dist)) // Returns true when the strategy is over.
       {
         ROS_ERROR("Grid: FINAL COVERAGE: %f PERCENT OF THE AREA", (100.0)*CoverageAcessibleArea());
         visited_all_grid_goals = true;

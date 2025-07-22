@@ -1,6 +1,6 @@
 ## catkin_ws_autonomous_tidy_up
 
-Code developed for **Autonomous manipulator robot navigation to tidy up unknown environments** paper and Master's thesis by Letícia dos Santos under the supervision of Jim Torresen, Mariana Kolberg, and Renan Maffei.
+Code developed for **An autonomous floor clearing strategy to tidy up unknown home environments with a mobile manipulator robot** paper and Master's thesis by Letícia dos Santos under the supervision of Jim Torresen, Mariana Kolberg, and Renan Maffei.
 
 From Institute of Informatics, Universidade Federal do Rio Grande do Sul, Porto Alegre, Brazil:
 - Letícia dos Santos: lsantos@inf.ufrgs.br
@@ -28,7 +28,7 @@ The *Moveit* module (available at https://moveit.ros.org/) is the default motion
 
 This repository has the proposed modules implementations in the **automomous_tidy_up package for ros melodic.**
 
-More details at the Master's thesis [here](https://lume.ufrgs.br/handle/10183/289273) and on the paper [here](). Video of the test with the real robot at University of Oslo lab [here](https://www.youtube.com/playlist?list=PL93mJkxVSzyQpZxOhE7NLlZv27-3-pwFS).
+More details at [the Master's thesis](https://lume.ufrgs.br/handle/10183/289273) and on the [paper](). Video of the test with the real robot at University of Oslo lab [here](https://www.youtube.com/playlist?list=PL93mJkxVSzyQpZxOhE7NLlZv27-3-pwFS).
 
 Robot tidying up the yellow cup from the test with the real robot, speedup x10:
 
@@ -36,14 +36,14 @@ Robot tidying up the yellow cup from the test with the real robot, speedup x10:
 
 ![TIAGo placeing.](images/tiago_placing.gif)
 
-The Gazebo models used in this work are on model_editor_models and building_editor_models folders. The original models for some objects are available [here](https://fuel.gazebosim.org/1.0/LeDSantos/fuel/collections/Autonomous%20manipulator%20robot%20navigation%20to%20tidy%20up%20unknown%20environments%20-%20public%20objects).
+The Gazebo models used in this work are on [model_editor_models](/model_editor_models) and [building_editor_models](/building_editor_models) folders. The original models for some objects are available [here](https://app.gazebosim.org/LeDSantos/fuel/collections/Autonomous%20manipulator%20robot%20navigation%20to%20tidy%20up%20unknown%20environments%20-%20public%20objects).
 
 🤖 Any questions or problems with the code of this repository, please contact us by email: lsantos@inf.ufrgs.br
 
 # Recomended enviroment:
 
 - Ubuntu 20.04
-- singularity-ce 3.11.4-focal. Fourther information [here](singularity_files/READEME.md).
+- singularity-ce 3.11.4-focal. [Fourther information](singularity_files/READEME.md).
 - NVIDIA GPU recommeded driver
 
 # To compile the code:

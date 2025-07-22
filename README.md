@@ -14,9 +14,21 @@ This code implements the following system:
 
 ![System diagram.](images/system_diag.png)
 
-*Light gray and yellow*: embedded robot modules; *dark gray*: external modules; *green*: proposed modules. This repository has the proposed modules implementations in the **automomous_tidy_up package for ros melodic.**
+*Light gray and yellow*: embedded robot modules; *dark gray*: external modules; *green*: proposed modules.
 
-More details at the Master's thesis [here]() and on the paper [here](). Video of the test with the real robot at University of Oslo lab [here](https://www.youtube.com/playlist?list=PL93mJkxVSzyQpZxOhE7NLlZv27-3-pwFS).
+In perception, along with our proposed components, the system uses three existing ROS packages. 
+As with any mobile robot, it needs an environment map to guide the base navigation and to be provided for many modules. Thus, we use the *gmapping* SLAM (Simultaneous Localization and Mapping) solution (available at http://wiki.ros.org/gmapping) to build a 2D occupancy grid map of the environment from LIDAR data.
+We opted for gmapping over more accurate but computationally demanding SLAM approaches to ensure real-time execution and compatibility with onboard resources.
+Another component, the *Octomap server* (available at http://wiki.ros.org/octomap_server), builds a local 3D map extracted from camera depth information, which is used to represent the reachable space around the robot that guides the plan for body motions. The last component, *Instance Segmentation* module (available at http://wiki.ros.org/jsk_recognition), predicts object instance masks and labels.
+
+Four available components besides the proposed modules are used for planning and control. 
+The *move_base* module (available at http://wiki.ros.org/move_base) integrates global and local planners for mobile base navigation. 
+The sensor data is combined with the map from *gmapping* to build global and local costmaps, which are used in semantic map updates. 
+The *Moveit* module (available at https://moveit.ros.org/) is the default motion planning framework for the TIAGo robot; while *play_motion* and *GripperGrasper* are modules (available at https://github.com/pal-robotics/) used for body motion control. 
+
+This repository has the proposed modules implementations in the **automomous_tidy_up package for ros melodic.**
+
+More details at the Master's thesis [here](https://lume.ufrgs.br/handle/10183/289273) and on the paper [here](). Video of the test with the real robot at University of Oslo lab [here](https://www.youtube.com/playlist?list=PL93mJkxVSzyQpZxOhE7NLlZv27-3-pwFS).
 
 Robot tidying up the yellow cup from the test with the real robot, speedup x10:
 

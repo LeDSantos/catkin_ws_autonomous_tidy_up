@@ -38,6 +38,17 @@ Robot tidying up the yellow cup from the test with the real robot, speedup x10:
 
 The Gazebo models used in this work are on [model_editor_models](/model_editor_models) and [building_editor_models](/building_editor_models) folders. The original models for some objects are available [here](https://app.gazebosim.org/LeDSantos/fuel/collections/Autonomous%20manipulator%20robot%20navigation%20to%20tidy%20up%20unknown%20environments%20-%20public%20objects).
 
+The Gazebo worlds are in the [worlds](src/autonomous_tidy_up/worlds) folder. The simulation environment is a house with a garage, kitchen, and bedroom with bathroom. One Gazebo world is the house with closed doors, and the other is without doors.
+
+Garage:
+![Garage at Gazebo.](images/garage_gazebo.png)
+
+Kitchen:
+![Kitchen at Gazebo.](images/kitchen_gazebo.png)
+
+Bedroom:
+![Bedroom at Gazebo.](images/bedroom_gazebo.png)
+
 🤖 Any questions or problems with the code of this repository, please contact us by email: lsantos@inf.ufrgs.br
 
 # Recomended enviroment:

@@ -1,6 +1,6 @@
 ## catkin_ws_autonomous_tidy_up
 
-Code developed for **An autonomous floor clearing strategy to tidy up unknown home environments with a mobile manipulator robot** paper and Master's thesis by Letícia dos Santos under the supervision of Jim Torresen, Mariana Kolberg, and Renan Maffei.
+Code developed for **An autonomous floor clearing strategy to tidy up unknown home environments with a mobile manipulator robot** paper and Master's thesis by Letícia dos Santos under the supervision of Jim Torresen, Mariana Kolberg, and Renan Maffei. Master's thesis available [here](http://hdl.handle.net/10183/289273). Paper published in 2025 IEEE International Conference on Advanced Robotics (ICAR) and available [here](https://doi.org/10.1109/ICAR65334.2025.11338715).
 
 From Institute of Informatics, Universidade Federal do Rio Grande do Sul, Porto Alegre, Brazil:
 - Letícia dos Santos: lsantos@inf.ufrgs.br
